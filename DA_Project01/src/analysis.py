@@ -1,9 +1,7 @@
 import pandas as pd
 
-# ---------------------------------------------------------
-# CITY-LEVEL ANALYSIS
-# ---------------------------------------------------------
 
+# CITY-LEVEL ANALYSIS
 def revenue_by_city(df: pd.DataFrame) -> pd.DataFrame:
     """
     Returns total revenue grouped by city.
@@ -28,11 +26,7 @@ def top_cities_by_profit(df: pd.DataFrame, n=5) -> pd.DataFrame:
         .reset_index()
     )
 
-
-# ---------------------------------------------------------
 # PRODUCT-LEVEL ANALYSIS
-# ---------------------------------------------------------
-
 def best_selling_categories(df: pd.DataFrame) -> pd.DataFrame:
     """
     Returns total sales grouped by product category.
@@ -53,11 +47,7 @@ def top_selling_products(df: pd.DataFrame, n=5) -> pd.DataFrame:
     """
     return best_selling_categories(df).head(n)
 
-
-# ---------------------------------------------------------
 # STORE-LEVEL ANALYSIS
-# ---------------------------------------------------------
-
 def revenue_by_store(df: pd.DataFrame) -> pd.DataFrame:
     """
     Returns store-wise total sales.
@@ -70,9 +60,7 @@ def revenue_by_store(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-# ---------------------------------------------------------
 # TIME-BASED ANALYSIS
-# ---------------------------------------------------------
 
 def monthly_revenue(df: pd.DataFrame) -> pd.DataFrame:
     """
@@ -96,3 +84,4 @@ def monthly_category_sales(df: pd.DataFrame) -> pd.DataFrame:
         .reset_index()
         .sort_values(["year", "month"])
     )
+
